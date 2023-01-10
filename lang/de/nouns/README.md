@@ -11,16 +11,16 @@ store data dump provided by the [Dbnary](http://kaiko.getalp.org/about-dbnary/) 
   
   Format: `<singular>,<plural>`
 
-  Note that a noun might not have a singular or a plural form.
+  Note that a given noun need not have both a singular and a plural form.
 * [release/de-nouns.txt](release/de-nouns.txt) - list of German nouns after removing nouns that are maintained on the
-  [input/de-nouns-del.txt](input/de-nouns-del.txt) exclusion list. Background: the list has been created with an
-  application in mind that finds a canonical word form (usually the nominative singular form) in the list. 
-  This can sometimes not be done easily as the same word form can be the plural form of one singular-plural pair and
-  at the same time the singular form of the other. For example, `Feste` can be the plural of `Fest` (_celebration_). But
-  it can also be the singular in the singular/plural pair `Feste/Festen`, meaning _fortress_ so that looking up  
-  `Feste` in the word list brings up more than one item and makes deciding upon the canonical form difficult. In this 
-  specific case, the pair `Feste/Festen` is hardly used in current day German and we this simply remove it from the list
-  via putting it on the `de-nouns-del.txt` exclusion list.
+  [input/de-nouns-del.txt](input/de-nouns-del.txt) exclusion list.
+  
+  Background: the list of German nouns has been created with an application in mind that finds a canonical word form (usually the nominative singular form) in the list. This can sometimes not be done easily as the same word form can be the plural form of one singular-plural pair and
+  at the same time be the singular form of the other.
+  
+  For example, `Feste` can be the plural of `Fest` (_celebration_). But
+  it can also be the singular in the singular/plural pair `Feste/Festen`, meaning _fortress_ so that looking up `Feste` in the word list brings up more than one item and makes deciding upon the canonical form difficult. In this 
+  specific case, the pair `Feste/Festen` is hardly used in current day German and we can simply remove it from the list by putting it on the `de-nouns-del.txt` exclusion list.
 
 ### Building the data files
 Follow these steps to build the data files yourself:

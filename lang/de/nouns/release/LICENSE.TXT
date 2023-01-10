@@ -1,0 +1,9 @@
+Files in this folder are released under the
+
+    Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0)
+    (https://creativecommons.org/licenses/by-sa/4.0/).
+
+The files are derived from datasets provided by Dbnary (http://kaiko.getalp.org/about-dbnary/),
+which were derived from Wiktionary (https://www.wiktionary.org).
+
+

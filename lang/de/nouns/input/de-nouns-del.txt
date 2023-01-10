@@ -1,0 +1,14 @@
+# This file is provided under the
+#
+#     Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0)
+#     (https://creativecommons.org/licenses/by-sa/4.0/).
+#
+# SPDX-License-Identifier: CC-BY-4.0
+# 
+# Noun pairs to remove from the pre-processed Dbnary dump
+as,asse
+asse,
+reis,reise
+reisen,
+feste,festen
+

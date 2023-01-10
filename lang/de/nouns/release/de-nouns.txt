@@ -5057,7 +5057,6 @@ arztzimmer,arztzimmer
 arántal,
 aräometer,aräometer
 as,as
-as,asse
 as-dur,
 as-dur-tonleiter,as-dur-tonleitern
 as-moll,
@@ -5179,10 +5178,10 @@ aspirant,aspiranten
 aspirantin,aspirantinnen
 aspirata,aspiratä
 aspiration,aspirationen
+ass,asse
 assam,assams
 assanierung,assanierungen
 assassine,assassinen
-asse,
 assekuradeur,assekuradeure
 assekuranz,assekuranzen
 assel,asseln
@@ -64572,7 +64571,6 @@ reiseleitung,reiseleitungen
 reiseliteratur,reiseliteraturen
 reiselord,reiselords
 reiselust,
-reisen,
 reisepapier,reisepapiere
 reisepass,reisepässe
 reiseplan,reisepläne

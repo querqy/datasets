@@ -108,7 +108,7 @@ def strip_line(line):
 def read_pairs_to_remove():
     # post-process
     with open(DELETIONS_FILE, 'r') as f:
-        for line in [line for line in [strip_line(line) for line in f.readlines()] if len(line) > 0]:
+        for line in [line.lower() for line in [strip_line(line) for line in f.readlines()] if len(line) > 0]:
             sep = line.find(',')
             sg, pl = line[:sep].strip(), line[sep + 1:].strip()
             yield None if len(sg) == 0 else sg, None if len(pl) == 0 else pl
@@ -125,10 +125,12 @@ def post_process():
     with open(DUMP_FILE, 'r') as f:
         lines = [line for line in f.readlines() if not line.startswith('#')]
         df_dump = pd.read_csv(StringIO("\n".join(lines)), header=None, names=['sg', 'pl'])
-    df_release = remove_unwanted_pairs(df_dump, df_del)
-    with open(DATASET_FILE, 'w') as f:
-        f.write(LICENSE)
-        df_release.to_csv(f, index=False, header=False)
+        df_dump = df_dump.where(pd.notnull(df_dump), None)
+
+        df_release = remove_unwanted_pairs(df_dump, df_del)
+        with open(DATASET_FILE, 'w') as f:
+            f.write(LICENSE)
+            df_release.to_csv(f, index=False, header=False)
 
 
 preprocess_dump()

@@ -12,7 +12,7 @@ DELETIONS_FILE = '../input/de-nouns-del.txt'
 
 # License for released artefacts:
 
-LICENSE = """# This file is provided by the Querqy Datasets project (https://github.com/querqy/datasets) under the
+HEADER = f"""# This file is provided by the Querqy Datasets project (https://github.com/querqy/datasets) under the
 #
 #     Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0)
 #     (https://creativecommons.org/licenses/by-sa/4.0/).
@@ -21,6 +21,8 @@ LICENSE = """# This file is provided by the Querqy Datasets project (https://git
 # 
 # It is derived from a dataset provided by Dbnary (http://kaiko.getalp.org/about-dbnary/),
 # which in turn was derived from Wiktionary (https://www.wiktionary.org).
+# 
+# Generated at: {datetime.now():%Y-%m-%d %H:%M:%S}
 #
 """
 
@@ -92,7 +94,7 @@ def preprocess_dump():
     g = create_graph()
     df_dump = extract_sg_pl(g)
     with open(DUMP_FILE, 'w') as f:
-        f.write(LICENSE)
+        f.write(HEADER)
         df_dump.to_csv(f, index=False, header=False)
     g.close()
 
@@ -129,7 +131,7 @@ def post_process():
 
         df_release = remove_unwanted_pairs(df_dump, df_del)
         with open(DATASET_FILE, 'w') as f:
-            f.write(LICENSE)
+            f.write(HEADER)
             df_release.to_csv(f, index=False, header=False)
 
 
